@@ -45,16 +45,25 @@ def main():
     # Create a joystick controller
     joystick_controller = ControlAssignment(button_assingment)
 
+    # Method used to override the state
+    override = False
+
     # Enter the infinite loop
     while(True):
-
-        joystick_controller.set_desired_state("surge", 5.0)
+        
+        # Exemplify the use of the override method (set_desired_state)
+        if override:
+            joystick_controller.set_desired_state("depth", -2.0)
 
         # Get a dictionary with the output of the controller (keys will be "surge" and "depth")
         output = joystick_controller.check_events()
 
         # Print the output dictionary to the screen
         print(output)
+
+        # If output depth reaches -1 override to -2.0
+        if output["depth"] < -1.0:
+            override=True
 
         # Sleep for a few milliseconds
         time.sleep(1.0 / 10.0)

@@ -17,7 +17,7 @@ f.close()
 # The package setup
 setup(
     name = 'joystick-controller',
-    version = '1.2.0',  # Ideally should be same as your GitHub release tag varsion
+    version = '1.2.2',  # Ideally should be same as your GitHub release tag varsion
     description = 'A simple library to map joystick inputs, or gamepad to a given control variable',
     long_description=README,
     long_description_content_type="text/markdown",

@@ -251,7 +251,7 @@ class ControlAssignment:
         if not (isinstance(value, float) or isinstance(value, int)):
             raise TypeError("Value must be an int or float")
 
-        if control_variable not in self.configurations_.items():
+        if control_variable not in self.configurations_.keys():
             raise ValueError("Control variable not used a key in configurations")
 
         # Override the desired value
