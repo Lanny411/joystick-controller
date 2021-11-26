@@ -1,5 +1,5 @@
 # Joystick Controller Package
-A simple library to map joystick inputs, or gamepad to a given control variable.
+A simple library to map joystick/gamepad inputs, to a set of control variables.
 
 [![Publish Python 🐍 distributions 📦 to PyPI](https://github.com/MarceloJacinto/joystick-controller/actions/workflows/publish-to-test-pypi.yml/badge.svg?branch=main)](https://github.com/MarceloJacinto/joystick-controller/actions/workflows/publish-to-test-pypi.yml)
 
