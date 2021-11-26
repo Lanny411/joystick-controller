@@ -240,6 +240,24 @@ class ControlAssignment:
                                          str(control_method["type"]) + " is " +
                                          str(self.validation_mapping_[control_method["type"]] - 1)))
 
+    def set_desired_state(self, control_variable, value):
+        """
+        Method that is used to overwritte the desired input of a given state. This can be usefull for
+        variables that can be integrated (if we want to manually reset the variable to a given value)
+        according to an external trigger
+        :param control_variable: the key name of the variable
+        :param value: the value to override with
+        """
+        if not (isinstance(value, float) or isinstance(value, int)):
+            raise TypeError("Value must be an int or float")
+
+        if control_variable not in self.configurations_.items():
+            raise ValueError("Control variable not used a key in configurations")
+
+        # Override the desired value
+        self.desired_inputs_[control_variable] = value
+
+
     @check_time_span_decorator
     def check_events(self, dt):
         """

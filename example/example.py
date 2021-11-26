@@ -48,6 +48,8 @@ def main():
     # Enter the infinite loop
     while(True):
 
+        joystick_controller.set_desired_state("surge", 5.0)
+
         # Get a dictionary with the output of the controller (keys will be "surge" and "depth")
         output = joystick_controller.check_events()
 

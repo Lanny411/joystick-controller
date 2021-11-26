@@ -23,5 +23,5 @@ SOFTWARE.
 @licence: MIT
 """
 # Version of the joystick-controller package
-__version__ = "1.0.0"
+__version__ = "1.2.0"
 from .control_assignment import ControlAssignment
